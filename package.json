@@ -1,0 +1,30 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipie Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr-a-sh-ant/Forkify.git"
+  },
+  "author": "Prashant Aryal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pr-a-sh-ant/Forkify/issues"
+  },
+  "homepage": "https://github.com/pr-a-sh-ant/Forkify#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "core-js": "^3.30.1",
+    "regenerator-runtime": "^0.13.11",
+    "sass": "^1.62.0"
+  }
+}
