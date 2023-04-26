@@ -1,9 +1,15 @@
 import * as model from './model.js';
 import recipieView from './views/recipieView.js';
 import recipeView from './views/recipieView.js';
+import resultsView from './views/resultsView.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import searchView from './views/searchView.js';
+
+if (module.hot) {
+  module.hot.accept();
+}
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -26,8 +32,26 @@ const controlRecipie = async function () {
   }
 };
 
+const controlSearchResults = async function () {
+  try {
+    resultsView.renderSpinner();
+    // 1) Get search query
+    const query = searchView.getQuery();
+    if (!query) return;
+
+    // 2) Load Search
+    await model.loadSearchResult(query);
+
+    //3)Render results
+    resultsView.render(model.state.search.results);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const init = function () {
   recipieView.addHandlerRender(controlRecipie);
+  searchView.addHandlerSearch(controlSearchResults);
 };
 
 init();
