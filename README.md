@@ -2,10 +2,6 @@
 
 A simple recipie providing website.
 
-#Development \
-\
-It is still under development. So Hang on.
-\
 \
 #Programming \
 \
