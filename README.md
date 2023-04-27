@@ -21,7 +21,7 @@ Since there is Sass and there are modules included so we have to use some packag
 Step-1 \
 \
 npm install
-
+\
 Step-2 \
 npm start - to run the program and host the server
 \
